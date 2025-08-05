@@ -1,33 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Link, Routes, Route} from 'react-router-dom';
+import Hiscores from './Hiscores';
+import Bosses from './Bosses'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">OSRS Search</h1>
+      <ul class="flex flex-wrap items-center justify-center text-gray-900 dark:text-white">
+        <li>
+          <Link to="/">
+          <button className="bg-blue-500 px-4 text-white ml-4 rounded-full hover: md:me-6">Home</button>
+          </Link><br/>
+        </li>
+        <li>
+          <Link to="/hiscores">
+            <button className="bg-blue-500 px-4 text-white ml-4 rounded-full hover: md:me-6">Hiscores</button>
+          </Link><br/>
+        </li>
+        <li>
+          <Link to="/bosses">
+            <button className="bg-blue-500 px-4 text-white ml-4 rounded-full hover: md:me-6">Bosses</button>
+          </Link>
+        </li>
+      </ul>
+      <Routes>
+        <Route path="/" element={<div></div>}/>
+        <Route path="/hiscores" element={<Hiscores />}/>
+        <Route path="/bosses" element={<Bosses />} />
+      </Routes>
     </>
   )
 }
