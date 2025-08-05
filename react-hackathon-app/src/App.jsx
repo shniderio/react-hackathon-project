@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-      <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">OSRS Search</h1>
-      <ul class="flex flex-wrap items-center justify-center text-gray-900 dark:text-white">
+      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">OSRS Search</h1>
+      <ul className="flex flex-wrap items-center justify-center text-gray-900 dark:text-white">
         <li>
           <Link to="/">
           <button className="bg-blue-500 px-4 text-white ml-4 rounded-full hover: md:me-6">Home</button>
