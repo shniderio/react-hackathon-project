@@ -75,6 +75,3 @@ export default function Hiscores() {
         </div>
     );
 }
-// {bossData.activities.map((activities, index) => (
-//                     <div key={index}>{activities.name + ': ' + activities.score}</div>
-//                     ))}

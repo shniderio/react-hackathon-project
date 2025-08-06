@@ -12,7 +12,7 @@ app.get('/api/hiscores', async (req, res) => {
     }
 
     try {
-        const response = await fetch(`https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=${player}`);
+        const response = await fetch(`https://secure.runescape.com/m=hiscore_oldschool/index_lite.json?player=${player}`);
         if (!response.ok) throw new Error('Player not found');
         const data = await response.text();
         res.send(data); // Send the raw CSV-like text
